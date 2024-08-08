@@ -1,0 +1,30 @@
+import streamlit as st
+st.write("Hello World : Getting Bore, Hello Brother !!")
+st.title("Display Title use st.title()")
+st.write("to write text use st.write()")
+st.header("I am Header To write header use st.header()")
+st.subheader("I am subheader to write subheader use st.subheader")
+st.text("Hey I am simple text to write simple text use st.text()")
+st.markdown("[streamlit](https://www.youtube.com/watch?v=prT7RLWGidw)")
+st.markdown("[Streamlit Cheatsheet](https://cheat-sheet.streamlit.app/)")
+st.success("success!")
+st.info("Information")
+st.warning("this is a warning")
+st.error("this is error")
+from PIL import Image
+img=Image.open("smj.jpg")
+st.image(img,width=300,caption="Satymev Jayate")
+video_file = open("vid.mp4","rb")
+video_bytes = video_file.read()
+st.video(video_bytes)
+st.video("https://youtu.be/i-L0Gs2whvc?si=VciiUmxlu8dJcDSb")
+audio_file = open("song.mp3", "rb")
+audio_bytes = audio_file.read()
+st.audio(audio_bytes, format="audio/mp3")
+st.header("Button Widgets")
+
+if st.button("play2"):
+    st.text("Hello World")
+    st.video("https://youtu.be/OhS11K3sEp8?si=zT4LZzLklWOsINY5")
+if st.checkbox("Checkbox"):
+    st.text("Checkbox selected")
